@@ -13,9 +13,7 @@
             <phase> clean </phase>
             <configuration>
               <target>
-
-                <echo message="Hello World" />
-
+                <echo>Hello ${project.artifactId}</echo>
               </target>
             </configuration>
             <goals>
