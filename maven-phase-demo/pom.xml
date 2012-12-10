@@ -7,14 +7,13 @@
     <plugins>
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.7</version>
         <executions>
           <execution>
             <phase> clean </phase>
             <configuration>
-              <target>
+              <tasks>
                 <echo>Hello ${project.artifactId}</echo>
-              </target>
+              </tasks>
             </configuration>
             <goals>
               <goal>run</goal>
