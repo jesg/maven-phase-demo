@@ -3,6 +3,9 @@
   <groupId>com.gowan.maven</groupId>
   <artifactId>maven-phase-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+  	<my.custom.property>true</my.custom.property>
+  </properties>
   <build>
     <plugins>
       <plugin>
@@ -12,7 +15,12 @@
             <phase> clean </phase>
             <configuration>
               <tasks>
+              	<echo>Hello World</echo>
                 <echo>Hello ${project.artifactId}</echo>
+                <echo>${os.name}</echo>
+                <echo>${java.home}</echo>
+                <echo>${env.PATH}</echo>
+                <echo>My custom property ${my.custom.property}</echo>
               </tasks>
             </configuration>
             <goals>
